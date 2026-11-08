@@ -6,9 +6,9 @@ Passed locally:
 - Chromium/Playwright: unconfigured Firebase displays actionable message; admin dashboard stays locked; stored HTML cannot create script/image elements; YouTube iframe uses youtube-nocookie.com; mobile page fits 390px width; no uncaught JavaScript errors.
 - Static HTTP server serves the app. Existing portfolio remains intact except for a Blog navigation link.
 
-Not verified against a live Firebase project: login, persistence, admin CRUD and deployed rules. Public Firebase config is pending.
+Firebase public web configuration is connected to portfolio-4e45c. Chromium successfully queried the live public posts collection (empty result) and loaded the signed-out admin login form with no uncaught JavaScript errors. Real admin login and CRUD still require the owner to sign in; the password has not been requested or used.
 
-Security test suite: `tests/firestore.test.mjs` covers admin CRUD, anonymous published reads, draft privacy, query constraints, non-admin write denial, self-promotion denial and ownership protection. Attempted execution was blocked while downloading the official emulator from storage.googleapis.com. These tests have NOT passed yet.
+Security test suite: `tests/firestore.test.mjs` covers admin CRUD, anonymous published reads, draft privacy, query constraints, non-admin write denial, self-promotion denial and ownership protection. Rerun after network configuration was applied: all 4 emulator security tests passed. Earlier download restriction is resolved. These tests validate repository rules in an isolated demo project, not the exact rules deployed in the production console.
 
 To run security tests without adding app dependencies:
 
