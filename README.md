@@ -4,7 +4,6 @@ Static portfolio with a Firebase Authentication + Cloud Firestore blog. Visitors
 
 **Start:** `python3 -m http.server 8000` from this directory. No npm install/build required.
 
-**Setup:** [Roman Urdu instructions](docs/SETUP-URDU.md). Add public Firebase web configuration in `firebase-config.js`; create an Authentication user, add its UID under `admins`, and publish `firestore.rules`. No client-side service-account credentials.
 
 **Tests:** `node --test tests/core.test.mjs`. Emulator security tests and browser checks are documented in [validation](docs/VALIDATION.md).
 
